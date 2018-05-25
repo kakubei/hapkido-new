@@ -1,0 +1,33 @@
+PODS:
+  - Realm (3.3.2):
+    - Realm/Headers (= 3.3.2)
+  - Realm/Headers (3.3.2)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxGesture (1.2.1):
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+
+DEPENDENCIES:
+  - Realm
+  - RxCocoa
+  - RxGesture
+  - RxSwift
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Realm
+    - RxCocoa
+    - RxGesture
+    - RxSwift
+
+SPEC CHECKSUMS:
+  Realm: d927fbf66df5532cfafc08afb5f7e53ded37b894
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxGesture: c278eb05b187abd47e11e65464ae4de53ab71d95
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+
+PODFILE CHECKSUM: 46148d7072576dea9256a517b732f43766e3c6ad
+
+COCOAPODS: 1.5.0

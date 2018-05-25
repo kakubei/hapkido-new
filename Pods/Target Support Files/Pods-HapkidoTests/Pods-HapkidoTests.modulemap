@@ -1,0 +1,6 @@
+framework module Pods_HapkidoTests {
+  umbrella header "Pods-HapkidoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
