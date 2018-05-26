@@ -18,6 +18,10 @@
 		CA2999BB20B8B320003D957D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA2999B920B8B320003D957D /* LaunchScreen.storyboard */; };
 		CA2999C620B8B320003D957D /* HapkidoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999C520B8B320003D957D /* HapkidoTests.swift */; };
 		CA2999D120B8B320003D957D /* HapkidoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999D020B8B320003D957D /* HapkidoUITests.swift */; };
+		CA2999E120B8B672003D957D /* BeltCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E020B8B672003D957D /* BeltCollectionViewCell.swift */; };
+		CA2999E420B8B6BE003D957D /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E320B8B6BE003D957D /* Storyboards.swift */; };
+		CA2999E620B8B8B1003D957D /* BeltsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E520B8B8B1003D957D /* BeltsViewModel.swift */; };
+		CA2999E820B8B8E8003D957D /* Belt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E720B8B8E8003D957D /* Belt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,10 @@
 		CA2999CC20B8B320003D957D /* HapkidoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HapkidoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA2999D020B8B320003D957D /* HapkidoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapkidoUITests.swift; sourceTree = "<group>"; };
 		CA2999D220B8B320003D957D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA2999E020B8B672003D957D /* BeltCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeltCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA2999E320B8B6BE003D957D /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		CA2999E520B8B8B1003D957D /* BeltsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeltsViewModel.swift; sourceTree = "<group>"; };
+		CA2999E720B8B8E8003D957D /* Belt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Belt.swift; sourceTree = "<group>"; };
 		D426E8B7DF5949329E06791F /* Pods_HapkidoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HapkidoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5E623A3240A1D9C67B484D /* Pods_HapkidoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HapkidoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,6 +147,7 @@
 		CA2999AD20B8B31E003D957D /* Hapkido */ = {
 			isa = PBXGroup;
 			children = (
+				CA2999E220B8B69F003D957D /* Helpers */,
 				CA2999DF20B8B567003D957D /* Models */,
 				CA2999AE20B8B31E003D957D /* AppDelegate.swift */,
 				CA2999DE20B8B558003D957D /* View Controllers */,
@@ -180,8 +189,19 @@
 		CA2999DF20B8B567003D957D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA2999E020B8B672003D957D /* BeltCollectionViewCell.swift */,
+				CA2999E520B8B8B1003D957D /* BeltsViewModel.swift */,
+				CA2999E720B8B8E8003D957D /* Belt.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CA2999E220B8B69F003D957D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CA2999E320B8B6BE003D957D /* Storyboards.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -323,6 +343,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Hapkido/Pods-Hapkido-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxGesture/RxGesture.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -330,6 +351,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxGesture.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -401,8 +423,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2999B320B8B31E003D957D /* CategoriesViewController.swift in Sources */,
+				CA2999E420B8B6BE003D957D /* Storyboards.swift in Sources */,
+				CA2999E120B8B672003D957D /* BeltCollectionViewCell.swift in Sources */,
 				CA2999AF20B8B31E003D957D /* AppDelegate.swift in Sources */,
 				CA2999B120B8B31E003D957D /* BeltsViewController.swift in Sources */,
+				CA2999E620B8B8B1003D957D /* BeltsViewModel.swift in Sources */,
+				CA2999E820B8B8E8003D957D /* Belt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -579,10 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = Hapkido/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.Hapkido";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -598,10 +621,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = Hapkido/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.Hapkido";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -618,11 +638,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = HapkidoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.HapkidoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -640,11 +656,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = HapkidoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.HapkidoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -661,11 +673,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = HapkidoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.HapkidoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -682,11 +690,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = HapkidoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.HapkidoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

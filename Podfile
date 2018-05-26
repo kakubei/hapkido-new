@@ -9,7 +9,7 @@ target 'Hapkido' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxGesture'
-  pod 'Realm'
+  pod 'RealmSwift'
 
   target 'HapkidoTests' do
     inherit! :search_paths

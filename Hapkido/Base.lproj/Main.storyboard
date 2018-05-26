@@ -29,21 +29,42 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="NIk-tm-ZSM">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="beltCell" id="NIk-tm-ZSM" customClass="BeltCollectionViewCell" customModule="Hapkido" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                             <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tVZ-Dp-Lar">
+                                                    <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
+                                        <constraints>
+                                            <constraint firstItem="tVZ-Dp-Lar" firstAttribute="top" secondItem="NIk-tm-ZSM" secondAttribute="top" id="7h2-ez-3mV"/>
+                                            <constraint firstAttribute="trailing" secondItem="tVZ-Dp-Lar" secondAttribute="trailing" id="Dij-6w-tI1"/>
+                                            <constraint firstAttribute="bottom" secondItem="tVZ-Dp-Lar" secondAttribute="bottom" id="i33-bo-xT0"/>
+                                            <constraint firstItem="tVZ-Dp-Lar" firstAttribute="leading" secondItem="NIk-tm-ZSM" secondAttribute="leading" id="v68-RD-83L"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="beltImageView" destination="tVZ-Dp-Lar" id="QBY-Tx-L8x"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="72a-Ad-tqE"/>
+                                    <outlet property="delegate" destination="9pv-A4-QxB" id="Mub-x7-jgg"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="collectionView" destination="eh6-LR-D1R" id="TTs-uS-vVX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
