@@ -13,7 +13,6 @@ class BeltsViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let beltModel = BeltsViewModel()
-//    var currentBelt: Belt?
     
     override func viewDidLoad() {
         super.viewDidLoad()
