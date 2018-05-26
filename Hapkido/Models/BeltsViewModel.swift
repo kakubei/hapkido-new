@@ -9,7 +9,13 @@
 import Foundation
 import RealmSwift
 
-struct BeltsViewModel {
+protocol BeltsModel {
+    var belts: List<Belt> { get set }
+    mutating func getBelts() // Retrieve belts from Realm or whatever storage
+    func configure(cell: BeltCollectionViewCell, for belt: Belt) // Let the model deal with all config logic
+}
+
+struct BeltsViewModel: BeltsModel {
     
     init() {
         getBelts()
@@ -28,5 +34,9 @@ struct BeltsViewModel {
             order += 1
             belts.append(newBelt)
         }
+    }
+    
+    func configure(cell: BeltCollectionViewCell, for belt: Belt) {
+        cell.configure(for: belt)
     }
 }

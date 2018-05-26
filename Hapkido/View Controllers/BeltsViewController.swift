@@ -32,7 +32,8 @@ extension BeltsViewController: UICollectionViewDataSource {
         
         let belt = beltModel.belts[indexPath.row]
         
-        cell.configure(for: belt)
+        // All config logic is encapsulated in the view model
+        beltModel.configure(cell: cell, for: belt)
         
         return cell
     }
