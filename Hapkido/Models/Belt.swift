@@ -10,15 +10,18 @@ import Foundation
 import UIKit
 import RealmSwift
 
-// TODO: Add Realm later
-@objcMembers class Belt {
+//final class Belts: Object {
+//    let items = List<Belt>()
+//}
+
+@objcMembers final class Belt: Object {
     dynamic var name: String = ""
     dynamic var order: Int = 0
     
-    init(name: String, order: Int) {
-        self.name = name
-        self.order = order
-    }
+//    init(name: String, order: Int) {
+//        self.name = name
+//        self.order = order
+//    }
     
     var image: UIImage {
         return UIImage(named: self.name) ?? UIImage()

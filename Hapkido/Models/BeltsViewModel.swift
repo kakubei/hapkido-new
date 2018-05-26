@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct BeltsViewModel {
     
@@ -14,15 +15,18 @@ struct BeltsViewModel {
         getBelts()
     }
     
-    public var belts: [Belt] = []
+    public var belts = List<Belt>()
     
     mutating func getBelts() {
         // TODO: Get them from local realm cache
         let beltNames = ["yellow", "green", "blue", "red", "brown", "black"]
         var order = 1
-        belts = beltNames.map { belt -> Belt in
-            return Belt(name: belt, order: order)
+        beltNames.forEach { belt in
+            let newBelt = Belt()
+            newBelt.name = belt
+            newBelt.order = order
             order += 1
+            belts.append(newBelt)
         }
     }
 }
