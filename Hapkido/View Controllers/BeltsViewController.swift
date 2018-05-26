@@ -9,10 +9,11 @@
 import UIKit
 
 class BeltsViewController: UIViewController {
-
-    let beltModel = BeltsViewModel()
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    let beltModel = BeltsViewModel()
+//    var currentBelt: Belt?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,5 +43,12 @@ extension BeltsViewController: UICollectionViewDataSource {
 }
 
 extension BeltsViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let belt = beltModel.belts[indexPath.row]
+        let catVC = storyboard?.instantiateViewController(withIdentifier: ViewController.Category.string) as! CategoriesViewController
+        catVC.belt = belt
+        performSegue(withIdentifier: ViewController.Belt.Segue.categoriesSegue.rawValue, sender: nil)
+    }
 }
+
+

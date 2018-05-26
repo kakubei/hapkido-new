@@ -19,9 +19,12 @@
 		CA2999C620B8B320003D957D /* HapkidoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999C520B8B320003D957D /* HapkidoTests.swift */; };
 		CA2999D120B8B320003D957D /* HapkidoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999D020B8B320003D957D /* HapkidoUITests.swift */; };
 		CA2999E120B8B672003D957D /* BeltCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E020B8B672003D957D /* BeltCollectionViewCell.swift */; };
-		CA2999E420B8B6BE003D957D /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E320B8B6BE003D957D /* Storyboards.swift */; };
+		CA2999E420B8B6BE003D957D /* ViewControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E320B8B6BE003D957D /* ViewControllers.swift */; };
 		CA2999E620B8B8B1003D957D /* BeltsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E520B8B8B1003D957D /* BeltsViewModel.swift */; };
 		CA2999E820B8B8E8003D957D /* Belt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E720B8B8E8003D957D /* Belt.swift */; };
+		CA2999EA20B95D79003D957D /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999E920B95D79003D957D /* CategoriesCollectionViewCell.swift */; };
+		CA2999ED20B962A4003D957D /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999EC20B962A4003D957D /* Category.swift */; };
+		CA2999EF20B963C6003D957D /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA2999EE20B963C6003D957D /* CategoriesViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +67,12 @@
 		CA2999D020B8B320003D957D /* HapkidoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapkidoUITests.swift; sourceTree = "<group>"; };
 		CA2999D220B8B320003D957D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA2999E020B8B672003D957D /* BeltCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeltCollectionViewCell.swift; sourceTree = "<group>"; };
-		CA2999E320B8B6BE003D957D /* Storyboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		CA2999E320B8B6BE003D957D /* ViewControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllers.swift; sourceTree = "<group>"; };
 		CA2999E520B8B8B1003D957D /* BeltsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeltsViewModel.swift; sourceTree = "<group>"; };
 		CA2999E720B8B8E8003D957D /* Belt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Belt.swift; sourceTree = "<group>"; };
+		CA2999E920B95D79003D957D /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA2999EC20B962A4003D957D /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CA2999EE20B963C6003D957D /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
 		D426E8B7DF5949329E06791F /* Pods_HapkidoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HapkidoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC5E623A3240A1D9C67B484D /* Pods_HapkidoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HapkidoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -189,9 +195,11 @@
 		CA2999DF20B8B567003D957D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				CA2999E020B8B672003D957D /* BeltCollectionViewCell.swift */,
+				CA2999EB20B95D89003D957D /* Cells */,
 				CA2999E520B8B8B1003D957D /* BeltsViewModel.swift */,
 				CA2999E720B8B8E8003D957D /* Belt.swift */,
+				CA2999EC20B962A4003D957D /* Category.swift */,
+				CA2999EE20B963C6003D957D /* CategoriesViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,9 +207,18 @@
 		CA2999E220B8B69F003D957D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				CA2999E320B8B6BE003D957D /* Storyboards.swift */,
+				CA2999E320B8B6BE003D957D /* ViewControllers.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CA2999EB20B95D89003D957D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CA2999E020B8B672003D957D /* BeltCollectionViewCell.swift */,
+				CA2999E920B95D79003D957D /* CategoriesCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,9 +440,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				CA2999B320B8B31E003D957D /* CategoriesViewController.swift in Sources */,
-				CA2999E420B8B6BE003D957D /* Storyboards.swift in Sources */,
+				CA2999E420B8B6BE003D957D /* ViewControllers.swift in Sources */,
+				CA2999EF20B963C6003D957D /* CategoriesViewModel.swift in Sources */,
+				CA2999EA20B95D79003D957D /* CategoriesCollectionViewCell.swift in Sources */,
 				CA2999E120B8B672003D957D /* BeltCollectionViewCell.swift in Sources */,
 				CA2999AF20B8B31E003D957D /* AppDelegate.swift in Sources */,
+				CA2999ED20B962A4003D957D /* Category.swift in Sources */,
 				CA2999B120B8B31E003D957D /* BeltsViewController.swift in Sources */,
 				CA2999E620B8B8B1003D957D /* BeltsViewModel.swift in Sources */,
 				CA2999E820B8B8E8003D957D /* Belt.swift in Sources */,
@@ -605,7 +625,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = Hapkido/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.Hapkido";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -621,7 +644,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = Hapkido/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.Hapkido";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -638,7 +664,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = HapkidoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.HapkidoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -656,7 +686,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = HapkidoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.HapkidoTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -673,7 +707,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = HapkidoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.HapkidoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -690,7 +728,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LE3JQGFXS2;
 				INFOPLIST_FILE = HapkidoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bruji.Gratitutde-Diary.HapkidoUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

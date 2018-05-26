@@ -27,3 +27,6 @@ import RealmSwift
         return UIImage(named: self.name) ?? UIImage()
     }
 }
+
+
+

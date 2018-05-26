@@ -10,9 +10,32 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
 
+    @IBOutlet weak var collectionView: UICollectionView!
+    
+    public var belt: Belt?
+    
+    let categoryModel = CategoriesViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
     }
 }
 
+extension CategoriesViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return categoryModel.categories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ViewController.Category.Cell.categoriesCell.rawValue, for: indexPath) as! CategoriesCollectionViewCell
+        
+        let category = categoryModel.categories[indexPath.row]
+        
+        categoryModel.configure(cell: cell, for: category)
+        
+        return cell
+    }
+    
+    
+}
