@@ -10,10 +10,6 @@ import Foundation
 import UIKit
 import RealmSwift
 
-//final class Belts: Object {
-//    let items = List<Belt>()
-//}
-
 @objcMembers final class Belt: Object {
     dynamic var name: String = ""
     dynamic var order: Int = 0

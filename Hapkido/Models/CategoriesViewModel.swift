@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import RealmSwift
 
 protocol CategoriesModel {
-    var categories: List<Category> { get set }
+    var categories: [Category] { get set }
     mutating func getCategories()
     func configure(cell: CategoriesCollectionViewCell, for category: Category)
 }
@@ -22,21 +21,15 @@ struct CategoriesViewModel: CategoriesModel {
         getCategories()
     }
     
-    var categories = List<Category>()
+    var categories = [Category]()
     
     mutating func getCategories() {
-        // TODO: Get them from real cache
-        let categoriesString = [(koreanName: "Nakpop Sul", localisedName: "Falls"), (koreanName: "Chigui Sul", localisedName: "Attacks"), (koreanName: "Jok Sul", localisedName: "Kicks")]
+        let storedCategories = StorageManager.shared.getCagegories()
         
-        var order = 1
-        categoriesString.forEach { category in
-            let newCategory = Category()
-            newCategory.koreanName = category.koreanName
-            newCategory.localisedName = category.localisedName
-            newCategory.order = order
-            categories.append(newCategory)
-            
-            order += 1
+        if storedCategories.count == 0 {
+            categories = CustomInitialiser.createAndStoreCategories()
+        } else {
+            categories = Array(storedCategories)
         }
     }
     
@@ -44,8 +37,8 @@ struct CategoriesViewModel: CategoriesModel {
         cell.koreanLabel.text = category.koreanName
         cell.localisedTextLabel.text = category.localisedName
         cell.imageView.image = category.image
-        
     }
     
     
 }
+

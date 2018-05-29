@@ -36,9 +36,7 @@ extension BeltsViewController: UICollectionViewDataSource {
         beltModel.configure(cell: cell, for: belt)
         
         return cell
-    }
-    
-    
+    }    
 }
 
 extension BeltsViewController: UICollectionViewDelegate {

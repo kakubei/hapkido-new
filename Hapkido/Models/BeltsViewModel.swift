@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import RealmSwift
 
 protocol BeltsModel {
-    var belts: List<Belt> { get set }
+    var belts: [Belt] { get set }
     mutating func getBelts() // Retrieve belts from Realm or whatever storage
     func configure(cell: BeltCollectionViewCell, for belt: Belt) // Let the model deal with all config logic
 }
@@ -21,19 +20,16 @@ struct BeltsViewModel: BeltsModel {
         getBelts()
     }
     
-    public var belts = List<Belt>()
+    public var belts = [Belt]()
     
     mutating func getBelts() {
-        // TODO: Get them from local realm cache
-        let beltNames = ["yellow", "green", "blue", "red", "brown", "black"]
-        var order = 1
-        beltNames.forEach { belt in
-            let newBelt = Belt()
-            newBelt.name = belt
-            newBelt.order = order
-            order += 1
-            belts.append(newBelt)
-        }
+        let storedBelts = StorageManager.shared.getBelts()
+        
+        if storedBelts.count == 0 {
+            belts = CustomInitialiser.createAndStoreBelts()
+        } else {
+            belts = Array(storedBelts)
+        } 
     }
     
     func configure(cell: BeltCollectionViewCell, for belt: Belt) {
