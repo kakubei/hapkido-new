@@ -37,6 +37,7 @@ struct BeltsViewModel: BeltsModel {
     }
     
     func configure(cell: BeltCollectionViewCell, for belt: Belt) {
-         cell.beltImageView.image = belt.image
+        cell.beltImageView.image = belt.image
+        cell.beltLabel.text = belt.localisedName
     }
 }

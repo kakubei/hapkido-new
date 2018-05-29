@@ -17,8 +17,11 @@ class CategoriesCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        imageView.backgroundColor = .black        
-        imageView.layer.cornerRadius = imageView.frame.height / 2
+        setupUI()
+    }
+    
+    private func setupUI() {
+        self.layer.cornerRadius = 10                
     }
     
 }

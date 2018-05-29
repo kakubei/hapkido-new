@@ -18,13 +18,13 @@ import RealmSwift
     dynamic var name: String = ""
     dynamic var order: Int = 0
     
-//    init(name: String, order: Int) {
-//        self.name = name
-//        self.order = order
-//    }
-    
     var image: UIImage {
         return UIImage(named: self.name) ?? UIImage()
+    }
+    
+    // TODO: Create localisation for Spanish and English
+    var localisedName: String {
+        return name.capitalized
     }
 }
 
