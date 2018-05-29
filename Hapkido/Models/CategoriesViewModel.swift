@@ -26,7 +26,7 @@ struct CategoriesViewModel: CategoriesModel {
     mutating func getCategories() {
         let storedCategories = StorageManager.shared.getCagegories()
         
-        if storedCategories.count == 0 {
+        if storedCategories.count < 15 {
             categories = CustomInitialiser.createAndStoreCategories()
         } else {
             categories = Array(storedCategories)

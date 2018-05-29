@@ -11,6 +11,7 @@ import UIKit
 import RealmSwift
 
 @objcMembers final class Category: Object {
+    dynamic var id: Int = 0
     dynamic var koreanName: String = ""
     dynamic var localisedName: String = ""
     dynamic var localisedExplanation: String = ""
@@ -18,5 +19,9 @@ import RealmSwift
     
     var image: UIImage {
         return UIImage(named: self.koreanName) ?? UIImage()
+    }
+    
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

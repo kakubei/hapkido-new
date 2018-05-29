@@ -1,5 +1,5 @@
 //
-//  Database.swift
+//  StorageManager.swift
 //  Hapkido
 //
 //  Created by Alex Dearden on 29/05/2018.
@@ -33,6 +33,12 @@ struct StorageManager {
         }
     }
     
+    func deleteBelts() {
+        try! database.write {
+            database.delete(database.objects(Belt.self))
+        }
+    }
+    
     // MARK: Categories
     
     func getCagegories() -> Results<Category> {
@@ -41,7 +47,13 @@ struct StorageManager {
     
     func add(category: Category) {
         try! database.write {
-            database.add(category)
+            database.add(category, update: true)
+        }
+    }
+    
+    func deleteCategories() {
+        try! database.write {
+            database.delete(database.objects(Category.self))
         }
     }
     
