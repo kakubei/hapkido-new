@@ -105,14 +105,14 @@
                                             <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KOREAN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lgw-gR-0vw">
-                                                    <rect key="frame" x="16" y="51" width="68" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KOREAN" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="lgw-gR-0vw">
+                                                    <rect key="frame" x="8" y="71.5" width="84" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RmQ-Ni-dhw">
-                                                    <rect key="frame" x="24" y="75" width="52" height="20"/>
+                                                    <rect key="frame" x="8" y="95" width="84" height="20"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-LightItalic" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" red="0.2901960784" green="0.2901960784" blue="0.2901960784" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -129,9 +129,13 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="RmQ-Ni-dhw" firstAttribute="top" secondItem="lgw-gR-0vw" secondAttribute="bottom" constant="3" id="0FL-Od-TJC"/>
+                                            <constraint firstItem="RmQ-Ni-dhw" firstAttribute="leading" secondItem="lgw-gR-0vw" secondAttribute="leading" id="2qL-Xa-ina"/>
+                                            <constraint firstItem="RmQ-Ni-dhw" firstAttribute="trailing" secondItem="lgw-gR-0vw" secondAttribute="trailing" id="61b-uz-GJT"/>
+                                            <constraint firstItem="lgw-gR-0vw" firstAttribute="leading" secondItem="LV7-MY-Eiy" secondAttribute="leadingMargin" id="Smo-1E-8I4"/>
                                             <constraint firstItem="Xmd-xO-LvW" firstAttribute="centerX" secondItem="LV7-MY-Eiy" secondAttribute="centerX" id="bzo-R9-o4u"/>
                                             <constraint firstItem="RmQ-Ni-dhw" firstAttribute="centerX" secondItem="LV7-MY-Eiy" secondAttribute="centerX" id="f2A-1g-tiP"/>
                                             <constraint firstAttribute="bottom" secondItem="RmQ-Ni-dhw" secondAttribute="bottom" constant="5" id="gIO-hq-6b6"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="lgw-gR-0vw" secondAttribute="trailing" id="jOM-bd-0id"/>
                                             <constraint firstItem="lgw-gR-0vw" firstAttribute="centerX" secondItem="LV7-MY-Eiy" secondAttribute="centerX" id="kVF-vP-hFt"/>
                                             <constraint firstItem="Xmd-xO-LvW" firstAttribute="top" secondItem="LV7-MY-Eiy" secondAttribute="topMargin" id="xNH-uW-WVe"/>
                                         </constraints>
