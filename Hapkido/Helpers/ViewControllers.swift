@@ -23,7 +23,7 @@ struct ViewController {
     
     enum Category {
         
-        static var string: String {
+        static var identifier: String {
             return "CategoriesViewController"
         }
         
@@ -31,7 +31,19 @@ struct ViewController {
             case categoriesCell
         }
         
+        enum Segue: String {
+            case techniquesSegue
+        }
+    }
+    
+    enum Techniques {
+        static var identifier: String {
+            return "TechniquesViewController"
+        }
         
+        enum cell: String {
+            case techniquesCell
+        }
     }
         
 }

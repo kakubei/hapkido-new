@@ -36,6 +36,12 @@ extension CategoriesViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-    
+}
+
+extension CategoriesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let techniquesVC = storyboard?.instantiateViewController(withIdentifier: ViewController.Techniques.identifier) as! TechniquesViewController
+        techniquesVC.belt = belt
+        performSegue(withIdentifier: ViewController.Category.Segue.techniquesSegue.rawValue, sender: nil)
+    }
 }

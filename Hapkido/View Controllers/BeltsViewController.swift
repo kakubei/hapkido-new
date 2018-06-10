@@ -42,7 +42,7 @@ extension BeltsViewController: UICollectionViewDataSource {
 extension BeltsViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let belt = beltModel.belts[indexPath.row]
-        let catVC = storyboard?.instantiateViewController(withIdentifier: ViewController.Category.string) as! CategoriesViewController
+        let catVC = storyboard?.instantiateViewController(withIdentifier: ViewController.Category.identifier) as! CategoriesViewController
         catVC.belt = belt
         performSegue(withIdentifier: ViewController.Belt.Segue.categoriesSegue.rawValue, sender: nil)
     }
