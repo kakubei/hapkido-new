@@ -8,8 +8,9 @@
 
 import UIKit
 
-class BeltCollectionViewCell: UICollectionViewCell {
+class BeltCollectionViewCell: RoundedCell {
     
-    @IBOutlet weak var beltImageView: UIImageView!
+//    @IBOutlet weak var beltImageView: UIImageView!
+    @IBOutlet weak var colourBand: UIView!
     @IBOutlet weak var beltLabel: UILabel!
 }

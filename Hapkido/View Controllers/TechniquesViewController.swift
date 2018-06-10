@@ -22,5 +22,11 @@ class TechniquesViewController: UIViewController {
 
     }
 
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
 
+    @IBAction func closeButtonTapped(_ sender: CloseButton) {
+        dismiss(animated: true, completion: nil)
+    }
 }

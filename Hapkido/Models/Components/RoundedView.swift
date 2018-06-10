@@ -46,12 +46,25 @@ class CustomRoundedView: UIView {
     }
 }
 
-// Becase classes can't have multiple inheritance, we have to duplicate code 😭
+// Because classes can't have multiple inheritance, we have to duplicate code 😭
 @IBDesignable
 class RoundedCollectionView: UICollectionView {
     @IBInspectable var cornerRadius: CGFloat {
         set {
             self.roundCorners([.topLeft, .topRight], radius: newValue)
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+}
+
+@IBDesignable
+class RoundedCell: UICollectionViewCell {
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+            clipsToBounds = newValue > 0
         }
         get {
             return layer.cornerRadius

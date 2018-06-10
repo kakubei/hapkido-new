@@ -19,6 +19,12 @@ class BeltsViewController: UIViewController {
 
     }
 
+    // TODO: Add custom VC or something so they all have this feature
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+
 }
 
 

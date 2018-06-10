@@ -20,6 +20,11 @@ class CategoriesViewController: UIViewController {
         super.viewDidLoad()
                 
     }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
 }
 
 extension CategoriesViewController: UICollectionViewDataSource {
